@@ -1,0 +1,72 @@
+ <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+ 
+<!--<hr> -->
+<div>
+    
+       <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">ajouter utilisateur</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputtext" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="exampleInputtext" aria-describedby="textHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputemail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleInputemail" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary" >ajouter</button>
+                <!-- (click)="ajouterArticle()" -->
+              </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+          <button type="button" class="btn btn-primary">ajouter</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- debut card -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <!-- button modal -->
+    <button type="button"   class="btn btn-primary mt-4 mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+        ajouter utilisateur</button>
+    <!-- Button trigger modal -->
+<div class="row bootstrap snippets bootdeys" >
+    <div class="col-md-3" *ngFor="let user of users">
+      <div class="panel widget">
+        <div class="widget-header bg-primary"></div>
+        <div class="widget-body text-center">
+          <img alt="Profile Picture" class="widget-img img-circle img-border-light" src="https://img.freepik.com/vecteurs-libre/portrait-belle-fille-diademe-tete_1196-849.jpg?size=626&ext=jpg">
+          <h4 class="mar-no">{{user.name}}</h4>
+          <p class="text-muted mar-btm">{{user.email}}</p>
+    
+          <div class="pad-ver">
+            <span class="fa-stack" style="color: red;">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack" style="color: #e1a624;">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<!-- fin card -->
+
+
+
+
